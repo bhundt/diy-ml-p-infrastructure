@@ -14,6 +14,6 @@ mkdir staging/data/raw
 mkdir staging/data/features
 
 mkdir prod/data/
-mkdir staging/feature-store/
+mkdir prod/feature-store/
 mkdir prod/data/raw
 mkdir prod/data/features
