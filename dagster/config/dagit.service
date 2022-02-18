@@ -1,0 +1,16 @@
+[Unit]
+Description=DAGIT UI          
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi    
+Environment="DAGSTER_HOME=~/dagster/"
+WorkingDirectory=/home/pi/dagster
+ExecStart=/home/pi/.local/bin/dagit -h 0.0.0.0 -p 8000
+
+[Install]
+WantedBy=multi-user.target
+

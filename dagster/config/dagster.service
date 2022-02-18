@@ -1,0 +1,15 @@
+[Unit]
+Description=DAGSTER-DAEMON
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+Environment="DAGSTER_HOME=~/dagster/"
+WorkingDirectory=/home/pi/dagster
+ExecStart=/home/pi/.local/bin/dagster-daemon run
+
+[Install]
+WantedBy=multi-user.target
