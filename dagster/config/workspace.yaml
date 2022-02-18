@@ -2,3 +2,9 @@ load_from:
   - python_file:
       working_directory: ../app/dev/pipelines/
       relative_path: ../app/dev/pipelines/repos.py
+  - python_file:
+      working_directory: ../app/staging/pipelines/
+      relative_path: ../app/dev/pipelines/repos.py
+  - python_file:
+      working_directory: ../app/prod/pipelines/
+      relative_path: ../app/dev/pipelines/repos.py
