@@ -1,8 +1,4 @@
 #!/bin/bash
-mkdir dev
-mkdir staging
-mkdir prod
-
 mkdir dev/data/
 mkdir dev/feature-store/
 mkdir dev/data/raw
