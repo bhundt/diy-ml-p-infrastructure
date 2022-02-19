@@ -2,3 +2,4 @@ dagit==0.14.0
 dagster==0.14.0
 feast==0.18.1
 dagster-shell==0.14.0
+yfinance==0.1.70
