@@ -1,0 +1,15 @@
+[Unit]
+Description=mlflow         
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi    
+WorkingDirectory=/home/pi/mlflow
+ExecStart=mlflow server --backend-store-uri sqlite:///backend/mlflow.sqlite --default-artifact-root artifacts/
+
+[Install]
+WantedBy=multi-user.target
+
