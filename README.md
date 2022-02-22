@@ -30,7 +30,7 @@ Local environment assumes:
 Change as needed.
 
 ## Usage
-- dagster: exposed on part 8000
+- dagster: exposed on port 8000
 - mlflow: exposed on port 8001
 
 Start:
