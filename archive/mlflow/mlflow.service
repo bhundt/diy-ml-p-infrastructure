@@ -1,0 +1,16 @@
+[Unit]
+Description=MLFLOW
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+Environment=PATH=/home/pi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+WorkingDirectory=/home/pi/mlflow
+ExecStart=/home/pi/.local/bin/mlflow server --backend-store-uri sqlite:////home/pi/mlflow/backend/mlflow.sqlite --default-artifact-root ~/m>
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
