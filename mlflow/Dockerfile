@@ -1,7 +1,13 @@
 FROM python:3-slim
 
 WORKDIR /mlflow/
-RUN pip install --no-cache-dir mlflow
+
+COPY requirements.txt ./
+
+#RUN pip install --no-cache-dir mlflow
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
 EXPOSE 5000
 
 ENV BACKEND_URI sqlite:////mlflow/mlflow.db
