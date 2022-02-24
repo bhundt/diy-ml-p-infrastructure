@@ -3,6 +3,7 @@ version: '3'
 services:
   mlflow:
     build: mlflow/
+    image: mlflow
     ports:
       - "8001:5000"
     volumes:
@@ -17,9 +18,11 @@ services:
 
   dagster:
     build: dagster/
+    image: dagster
     ports:
       - "8000:5000"
     volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
       - "../../dagster:/dagster"
       - "../../app:/app"
     restart: always
